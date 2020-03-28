@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0 0;
@@ -16,9 +18,13 @@ a {
 }
 body {
   display: flex;
-  height: 100vh;
+  height: 140vh;
+
+  background-color: #eeeeee;
+  font-family: 'Open Sans', sans-serif;
 }
 
+/*  NavBar  */
 .menu-container {
   height: 100%;
   width: 40%;
@@ -26,7 +32,10 @@ body {
 }
 
 .menu-container header {
+  display: flex;
+  justify-content: center;
   padding: 28px;
+  font-weight: bold;
 }
 
 #navbar,
@@ -47,20 +56,60 @@ body {
   align-items: center;
 }
 
+/*    Main    */
+
 #main-doc {
   display: flex;
   flex-direction: column;
 
-  margin-left: 48px;
+  margin: 0 28px;
 }
 
-#main-doc p {
-  margin-left: 8px;
-}
-
-#main-doc h2,
 #main-doc header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/*  Titles and Texts */
+section header {
+  font-size: 24px;
+  font-weight: bold;
+
+  margin: 28px 0;
+}
+
+section h3 {
+  margin: 16px 0;
+}
+
+section h5,
+section h6 {
+  margin: 8px 0;
+}
+
+section p,
+section code,
+section h6,
+section h5,
+section ul {
+  margin-left: 12px;
+}
+
+code {
+  background: lightgrey;
+  opacity: 0.5;
+}
+
+/*  Media Queries */
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+  }
+
+  .menu-container {
+    width: 100%;
+    border-right: none;
+    border-bottom: solid;
+  }
 }
